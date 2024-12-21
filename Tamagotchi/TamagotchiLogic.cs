@@ -5,8 +5,8 @@ namespace Tamagotchi
 {
     public class TamagotchiLogic
     {
-        private const int INTERVAL = 30;
-        private System.Timers.Timer _timer;
+        private const int INTERVAL = 20;
+        public System.Timers.Timer MyTimer { get; set; }
         public bool CurrentlyUpdating { get; set; }
         public string Name { get; set; }
         public int Food { get; set; }
@@ -19,11 +19,11 @@ namespace Tamagotchi
             Happiness = 50;
             Energy = 50;
             CurrentlyUpdating = false;
-            _timer = new System.Timers.Timer(); // 20000 milliseconds = 20 seconds
-            _timer.Interval = TimeSpan.FromSeconds(INTERVAL).TotalMilliseconds;
-            _timer.Elapsed += OnTimedEvent; // Attach the event handler
-            _timer.AutoReset = true; // Repeat every 20 seconds
-            _timer.Enabled = true; // Start the timer
+            MyTimer = new System.Timers.Timer(); // 20000 milliseconds = 20 seconds
+            MyTimer.Interval = TimeSpan.FromSeconds(INTERVAL).TotalMilliseconds;
+            MyTimer.Elapsed += OnTimedEvent; // Attach the event handler
+            MyTimer.AutoReset = true; // Repeat every 20 seconds
+            MyTimer.Enabled = true; // Start the timer
         }
         private void OnTimedEvent(object sender, ElapsedEventArgs e)
         {
