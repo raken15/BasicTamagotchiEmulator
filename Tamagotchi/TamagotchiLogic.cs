@@ -31,17 +31,7 @@ namespace Tamagotchi
             // Decrease Food by 2 and happiness by 1 every 20 seconds
             Food = Math.Max(0, Food - 2);
             Happiness = Math.Max(0, Happiness - 1);
-            Console.WriteLine($@"
-    /\_/\  
-   ( o.o )  *Tamagotchi*  
-    > ^ <   *Virtual Pet*  
-   *Beep Beep!*
-            ");
-            Console.WriteLine($"\n--- {Name}'s Status ---");
-            Console.WriteLine($"Food: {Food}");
-            Console.WriteLine($"Happiness: {Happiness}");
-            Console.WriteLine($"Energy: {Energy}");
-            Console.WriteLine("-------------------------\n");
+            ShowStatus();
             Console.WriteLine("Food decreased and Happiness decreased!");
             System.Threading.Thread.Sleep(3000);
             Console.WriteLine("What do you want to do? (Feed, Play, Sleep, Show Status, Quit)");
@@ -50,6 +40,12 @@ namespace Tamagotchi
         public void Feed()
         {
             Food = Math.Min(100, Food + 10);
+            Console.WriteLine(@"
+    /\_/\  
+   ( o_o )  *Yummy!*  
+    > ^ <   *Munching on food...*  
+   *Beep Beep!*   
+            ");
             Console.WriteLine(@"
     /\_/\  
    ( o.o )  *Yummy!*  
