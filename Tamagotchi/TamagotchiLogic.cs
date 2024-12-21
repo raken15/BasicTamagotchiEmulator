@@ -37,7 +37,7 @@ namespace Tamagotchi
     > ^ <   *Virtual Pet*  
    *Beep Beep!*
             ");
-            Console.WriteLine($"\n--- {Name} Status ---");
+            Console.WriteLine($"\n--- {Name}'s Status ---");
             Console.WriteLine($"Food: {Food}");
             Console.WriteLine($"Happiness: {Happiness}");
             Console.WriteLine($"Energy: {Energy}");
@@ -103,7 +103,7 @@ namespace Tamagotchi
     > ^ <   *Virtual Pet*  
    *Beep Beep!*
             ");
-            Console.WriteLine($"\n--- {Name} Status ---");
+            Console.WriteLine($"\n--- {Name}'s Status ---");
             Console.WriteLine($"Food: {Food}");
             Console.WriteLine($"Happiness: {Happiness}");
             Console.WriteLine($"Energy: {Energy}");
